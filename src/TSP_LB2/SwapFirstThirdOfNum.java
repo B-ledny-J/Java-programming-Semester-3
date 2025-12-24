@@ -2,8 +2,7 @@ package TSP_LB2;
 
 import java.util.Scanner;
 
-public class SwapFirstThirdOfNum
-{
+public class SwapFirstThirdOfNum {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Введіть чотиризначне ціле число: ");

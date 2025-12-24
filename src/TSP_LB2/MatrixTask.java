@@ -5,7 +5,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class MatrixTask {
-
 	public static void main(String[] args) {
 		final int SIZE = 5;
 		int[][] A = new int[SIZE][SIZE];
