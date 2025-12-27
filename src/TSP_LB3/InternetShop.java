@@ -33,16 +33,10 @@ class Product {
 		this.deliveryDate = deliveryDate;
 	}
 
-	public String getName() { return name; }
 	public String getCategory() { return category; }
-	public String getDescription() { return description; }
-	public double getPrice() { return price; }
 	public boolean isInStorage() { return isInStorage; }
-	public int getQuantity() { return quantity; }
-	public LocalDate getDeliveryDate() { return deliveryDate; }
 
-	@Override
-	public String toString() {
+	public String getInfo() {
 		return String.format("Товар: %s | Категорія: %s | Ціна: %.2f | Кількість: %d | Наявність: %s",
 				name, category, price, quantity, isInStorage ? "є" : "немає");
 	}
@@ -106,7 +100,7 @@ public class InternetShop {
 	private static void showAllProducts() {
 		System.out.println("\n=== Список усіх товарів ===");
 		for (Product p : products) {
-			System.out.println(p);
+			System.out.println(p.getInfo());
 		}
 	}
 
@@ -126,7 +120,7 @@ public class InternetShop {
 		boolean found = false;
 		for (Product p : products) {
 			if (p.getCategory().equalsIgnoreCase(category)) {
-				System.out.println(p);
+				System.out.println(p.getInfo());
 				found = true;
 			}
 		}
